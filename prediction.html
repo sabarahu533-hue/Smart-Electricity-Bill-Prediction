@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Prediction | SmartBill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ SmartBill</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="prediction.html">Prediction</a>
+            <a href="analytics.html">Analytics</a>
+            <a href="history.html">History</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <section class="prediction-section">
+        <div class="prediction-box">
+
+            <h2>Pakistan Electricity Bill Calculator</h2>
+            <p>Estimate your monthly residential electricity bill.</p>
+
+            <label for="company">Electricity Distribution Company</label>
+            <select id="company">
+                <option value="LESCO">LESCO</option>
+                <option value="HESCO">HESCO</option>
+                <option value="SEPCO">SEPCO</option>
+                <option value="MEPCO">MEPCO</option>
+                <option value="FESCO">FESCO</option>
+                <option value="GEPCO">GEPCO</option>
+                <option value="IESCO">IESCO</option>
+                <option value="PESCO">PESCO</option>
+                <option value="TESCO">TESCO</option>
+                <option value="QESCO">QESCO</option>
+                <option value="HAZECO">HAZECO</option>
+                <option value="KE">K-Electric</option>
+            </select>
+
+            <label for="category">Consumer Category</label>
+            <select id="category">
+                <option value="lifeline">Lifeline</option>
+                <option value="protected">Protected</option>
+                <option value="unprotected">Non-Protected</option>
+            </select>
+
+            <label for="units">Monthly Electricity Units (kWh)</label>
+            <input type="number" id="units" min="1" max="10000" placeholder="Example: 200">
+
+            <label for="load">Sanctioned Load (kW)</label>
+            <input type="number" id="load" min="1" max="100" value="2">
+
+            <button onclick="predictBill()">Calculate My Bill</button>
+
+            <div id="result" class="result">
+                Your estimated bill will appear here.
+            </div>
+
+            <p class="note">
+                This is an estimated calculation. Applicable taxes,
+                monthly FCA, QTA and other charges must be verified
+                separately before showing a final payable amount.
+            </p>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Smart Electricity Bill Prediction System</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
